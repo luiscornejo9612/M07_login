@@ -26,12 +26,17 @@
         $coneect = mysqli_connect(DB_HOST, DB_USER, DB_PSW, DB_NAME);
 
         if (!$coneect) {
-           echo "Error de connexio: ". mysqli_connect_error();
+            echo "Error de connexio: ". mysqli_connect_error();
         }
         else{
             //FEM UNA SELECT PER RETORNAR TOTS ELS PRODUCTES
-            $query = "INSERT iNTO user (columna1, columna2, columna3,columna4, columna5, columna6, columna7)
-            VALUES ($user_id, '$name', '$surname', '$password', '$email', '$rol', '$active')";
+            $query = "INSERT INTO `user`(`user_id`, `name`, `surname`, `password`, `email`, `rol`, `active`) 
+            VALUES ($user_id,'$name','$surname','$password','$email','$rol','$active')";
+            if (mysqli_query($coneect, $query)) {
+                echo "Ben fet";
+            } else {
+                echo "Error  " . mysqli_error($coneect);
+            }
         }
 
     ?>
