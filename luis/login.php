@@ -12,7 +12,7 @@ session_start();
 <body>
     <h1>LOGIN</h1>
 
-    <form action="validate.php" method="post">
+    <form action="resultat.php" method="post">
     <div>
         <label for="email">Email</label>
         <input type="email" id="email" name="email">
