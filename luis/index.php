@@ -20,7 +20,7 @@ if  ($_SESSION["alta"] == false){
 
     <?php
         $coneect = mysqli_connect(DB_HOST, DB_USER, DB_PSW, DB_NAME);
-        $select_name = "SELECT * FROM `user` WHERE `rol` = 'alumnat'";  
+        $select_name = "SELECT * FROM `user` WHERE `rol` = 'alunnat'";  
         $datos_user = mysqli_query($coneect,$select_name); 
         mysqli_num_rows($datos_user);
         $dato=mysqli_fetch_array($datos_user);
