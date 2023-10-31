@@ -22,7 +22,7 @@ session_start();
         <input type="password" id="password" name="password">
     </div>
     <div>
-        <input type="checkbox" id="remenber me" name="remenber me">
+        <input type="checkbox" id="remenberme" name="remenberme">
         <label for="checkbox">Remembre me</label>
     </div>
     <div>

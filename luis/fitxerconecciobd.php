@@ -26,21 +26,21 @@
         //FEM LA CONEXIO A LES BBDD
         $coneect = mysqli_connect(DB_HOST, DB_USER, DB_PSW, DB_NAME);
 
-        if (!$coneect) {
-            echo "Error de connexio: ". mysqli_connect_error();
-        }
-        else{
             //FEM UNA SELECT PER RETORNAR TOTS ELS PRODUCTES
             $query = "INSERT INTO `user`(`user_id`, `name`, `surname`, `password`, `email`, `rol`, `active`) 
             VALUES ($user_id,'$name','$surname','$password','$email','$rol','$active')";
             
             $mostrar= "SELECT * FROM USER";
 
-            echo "ok";
-            $datos_user=mysqli_query($coneect, $query);
-            header('location: inicio.php');         
-        }
-        mysqli_close($coneect);
+            if(!$coneect){
+                echo "Error de connexio: " . mysqli_connect_error();
+            
+            }else{
+                echo "funciona";
+                $datos_usuario=mysqli_query($coneect, $query);
+                header('location: login.php');
+            }
+            mysqli_close($coneect);
 
     ?>
 </body>

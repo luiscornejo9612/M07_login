@@ -53,7 +53,7 @@ if  ($_SESSION["alta"] == false){
 ?>
 
 <br/>
-<a href="http://localhost/PracticaPHPlogin/M07_login/luis/mostrarLaInfo.php?user_id=<?php echo $_SESSION['user_id']; ?>">Mostrar información</a>
+<a href="http://localhost/M07_login/luis/mostrarLaInfo.php?user_id=<?php echo $_SESSION['user_id']; ?>">Mostrar información</a>
 <a href="desconectar.php">Desconectar</a>
 
 </body>
