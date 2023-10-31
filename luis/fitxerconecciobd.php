@@ -21,6 +21,7 @@
         $email = $_POST['email'];
         $rol = $_POST['rol'];
         $active = $_POST['active'];
+        $datos_user;
 
         //FEM LA CONEXIO A LES BBDD
         $coneect = mysqli_connect(DB_HOST, DB_USER, DB_PSW, DB_NAME);
@@ -32,12 +33,14 @@
             //FEM UNA SELECT PER RETORNAR TOTS ELS PRODUCTES
             $query = "INSERT INTO `user`(`user_id`, `name`, `surname`, `password`, `email`, `rol`, `active`) 
             VALUES ($user_id,'$name','$surname','$password','$email','$rol','$active')";
-            if (mysqli_query($coneect, $query)) {
-                echo "Ben fet";
-            } else {
-                echo "Error  " . mysqli_error($coneect);
-            }
+            
+            $mostrar= "SELECT * FROM USER";
+
+            echo "ok";
+            $datos_user=mysqli_query($coneect, $query);
+            header('location: inicio.php');         
         }
+        mysqli_close($coneect);
 
     ?>
 </body>

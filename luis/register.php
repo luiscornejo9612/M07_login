@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="fitxer.php">
+    <form method="POST" action="fitxerconeciobd.php">
         <div>
             <label for="user_id">user_id</label><br>
             <input type="number" id="user_id" name="user_id">
@@ -29,8 +29,8 @@
         </div>
         <div>
             <label>rol</label><br>
-            <input type="radio" name="rol" value="estudiante"> Estudiante
-            <input type="radio" name="rol" value="profesor"> Profesor
+            <input type="radio" name="rol" value="profesorat"> Estudiante
+            <input type="radio" name="rol" value="alunnat"> Profesor
         </div>
         <div>
             <label>active</label><br>
@@ -38,5 +38,9 @@
         </div>
         <input type="submit" value="submit">
     </form>
+    <div>
+        <a href = "login.php">Ya he creado una cuenta</a>
+    </div>
+
 </body>
 </html>
