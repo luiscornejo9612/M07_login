@@ -6,7 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="fitxerconeciobd.php">
+    <h1>REGISTRATE</h1>
+    <form method="post" action="fitxerconecciobd.php">
         <div>
             <label for="user_id">user_id</label><br>
             <input type="number" id="user_id" name="user_id">
@@ -39,7 +40,7 @@
             <input type="radio" id="active" name="active" value="1" required>
             <label for="active">Activo</label>
             <input type="radio" id="bloqueado" name="active" value="0" required>
-            <label for="bloqueado">Bloqueado</label><br><br>
+            <label for="bloqueado">No Activo</label><br><br>
         </div><br>
         <input type="submit" value="submit">
     </form>
