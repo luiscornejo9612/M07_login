@@ -30,20 +30,20 @@ if  ($_SESSION["alta"] == false){
     <?php
         if ($_SESSION["rol"] == "profesorat") {
     ?>
-    <table>
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-        </tr>
-        <?php
-        foreach ($datos_user as $i => $datoUser) {
-        ?>
+        <table>
             <tr>
-                <td><?php echo $datoUser["name"]; ?></td>
-                <td><?php echo $datoUser["surname"]; ?></td>
-                <td><?php echo $datoUser["email"]; ?></td>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
             </tr>
+            <?php
+            foreach ($datos_user as $i => $datoUser) {
+            ?>
+                <tr>
+                    <td><?php echo $datoUser["name"]; ?></td>
+                    <td><?php echo $datoUser["surname"]; ?></td>
+                    <td><?php echo $datoUser["email"]; ?></td>
+                </tr>
         <?php
         } 
         ?>
