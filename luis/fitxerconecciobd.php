@@ -7,12 +7,7 @@
 </head>
 <body>
     <?php 
-        //CONSTANS DE LA CONNEXIO A LES BBDD  
-        define("DB_HOST","localhost");
-        define("DB_NAME", "users");
-        define("DB_USER", "root");
-        define("DB_PSW", '');
-
+        include "dbconf.php";
 
         $user_id = $_POST['user_id'];
         $name = $_POST['name'];
@@ -37,7 +32,7 @@
             
             }else{
                 echo "funciona";
-                $datos_usuario=mysqli_query($coneect, $query);
+                $datos_user=mysqli_query($coneect, $query);
                 header('location: login.php');
             }
             mysqli_close($coneect);

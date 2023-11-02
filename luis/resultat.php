@@ -1,14 +1,14 @@
 <?php
 session_start();
-include "fitxerconecciobd.php";
+include "dbconf.php";
 
 
-$PASSWORD= $_POST['password'];
-$EMAIL= $_POST['email'];
+$password= $_POST['password'];
+$email= $_POST['email'];
 
 $coneccio = mysqli_connect(DB_HOST, DB_USER, DB_PSW, DB_NAME);
 
-$select_name = "SELECT * FROM `user` WHERE `email` = '$EMAIL' and `password` = '$PASSWORD'";  
+$select_name = "SELECT * FROM `user` WHERE `email` = '$email' and `password` = '$password'";  
 
 $datos_user = mysqli_query($coneccio, $select_name);
 mysqli_num_rows($datos_user);
@@ -28,7 +28,7 @@ try {
             
             include "login.php";
             echo "<br>";
-            echo "<p>Error</p>";
+            echo "<p>Error no estas registrado </p>";
         }
     }
 } catch (Exception $e) {

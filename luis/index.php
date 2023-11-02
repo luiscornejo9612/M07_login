@@ -1,6 +1,6 @@
 <?php
 session_start();   
-include "fitxerconecciobd.php"; 
+include "dbconf.php"; 
 if  ($_SESSION["alta"] == false){
     header('location: login.php');
 }

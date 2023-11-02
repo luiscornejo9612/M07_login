@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('fitxerconecciobd.php');
+include('dbconf.php');
 if  ($_SESSION["alta"] == false){
     header('location: login.php');
 }
@@ -22,8 +22,8 @@ if  ($_SESSION["alta"] == false){
     <?php 
             $coneccio = mysqli_connect(DB_HOST, DB_USER, DB_PSW, DB_NAME);
 
-            $ID = $_GET["user_id"];        
-            $select_name = "SELECT * FROM `user` WHERE `user_id` = '$ID'";  
+            $user_id = $_GET["user_id"];        
+            $select_name = "SELECT * FROM `user` WHERE `user_id` = '$user_id'";  
 
             $datos_user = mysqli_query($coneccio,$select_name);
             mysqli_num_rows($datos_user);
